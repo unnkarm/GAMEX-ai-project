@@ -1,1 +1,0 @@
-# Tkinter is included with most standard Python installations. No pip dependencies.

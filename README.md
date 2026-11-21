@@ -2,6 +2,8 @@
 
 ### A Tic-Tac-Toe AI Powered by a Depth-Limited Minimax Engine
 
+> **Project Topic:** Develop a generic two-player zero-sum game engine, test it on Tic-Tac-Toe, and implement configurable-depth Minimax search. The application displays the game-tree statistics: number of nodes explored, maximum depth, utility value, and best move.
+
 GAMEX is an interactive Python demonstration of game-playing artificial intelligence. It combines a generic minimax search engine with a polished Tkinter interface, allowing users to play Tic-Tac-Toe against an AI and inspect the search process in real time.
 
 The project demonstrates core AI concepts including:
@@ -97,7 +99,6 @@ GAMEX-ai-project/
 │   └── ttt.py       # Tic-Tac-Toe game-state implementation
 ├── tests/
 │   └── test_minimax.py
-├── assets/
 ├── run_game.bat
 ├── run_tests.bat
 └── README.md
@@ -132,7 +133,7 @@ python -m unittest discover -s tests -v
 
 ## Minimax Overview
 
-Minimax models a turn-based game as a search tree. The AI assumes:
+Minimax models a turn-based game as a search tree. GAMEX uses alpha-beta pruning to skip branches that cannot affect the result. The AI assumes:
 
 - Its turn attempts to **maximize** the utility value.
 - The opponent's turn attempts to **minimize** that value.

@@ -26,5 +26,12 @@ class TestMinimaxTicTacToe(unittest.TestCase):
         with self.assertRaises(ValueError):
             minimax(TicTacToe(), -1, "O")
 
+    def test_terminal_board_has_no_move(self):
+        state = TicTacToe(["X","X","X","O","O"," "," "," "," "])
+        move, value, stats = minimax(state, 9, "O")
+        self.assertIsNone(move)
+        self.assertEqual(value, -1)
+        self.assertEqual(stats.nodes, 0)
+
 if __name__ == "__main__":
     unittest.main()

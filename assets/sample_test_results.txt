@@ -1,1 +1,0 @@
-Test suite: 4 unit tests covering legal move, winning move, blocking, and depth validation.
